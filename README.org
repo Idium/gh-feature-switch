@@ -1,0 +1,40 @@
+* gh-feature-switch
+
+** Getting started
+
+Running tests:
+#+BEGIN_SRC shell
+  $ npm install
+  $ npm test
+#+END_SRC
+
+The above will install all dependencies and run eslint, then (if it passes), ava.
+Since this is an entirely non-visual component, the functionality can be easily checked with automated enzyme tests.
+
+** Usage
+
+This component implements simple feature switches for React applications.
+The feature switch component accepts 3 props:
+- ~children~ - to be conditionally rendered
+- ~all~ - a list of conditions, all of which have to be satisfied in order to render children
+- ~either~ - a list of conditions, any of which have to be satisifed in order to render children
+
+In case both ~all~ and ~either~ are supplied, ~either~ will be ignored.
+
+** Contributing
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+
+The following rules SHALL be applied to code reviews. Contributions breaking any of these rules SHALL NOT be merged. This is to ensure consistent code style and quality.
+
+- ~npm test~ MUST pass with no errors, specifically:
+
+  - ESLint MUST pass with no errors
+  - ESLint MAY return warnings, but they SHOULD be fixed as soon as possible whenever it is feasible to do so without considerable effort
+  - Tests MUST pass with no errors
+
+- ESLint rules MUST NOT be modified, unless they are inconsistent with the main Growth House Dashboard repository, in which case they MUST BE brought up to date before merging any changes.
+
+** About
+
+Created by [[https://gitlab.idium.no/aleks][Aleksander Świątkowski]].
